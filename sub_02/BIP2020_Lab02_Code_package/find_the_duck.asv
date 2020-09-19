@@ -1,0 +1,22 @@
+function duck = find_the_duck(I)
+	R = squeeze(I(:,:,1));
+    G = squeeze(I(:,:,2));
+    B = squeeze(I(:,:,3));
+    subplot(2,3,1);
+    imshow(R);
+    subplot(2,3,2);
+    imshow(G);
+    subplot(2,3,3);
+    imshow(B);
+    duck = R>160;
+    subplot(2,3,4);
+    imshow(duck);
+    
+    duck = B<80;
+    subplot(2,3,5);
+    imshow(duck);
+    
+    duck = B<90;
+    subplot(2,3,6);
+    imshow(duck);
+end

@@ -1,0 +1,15 @@
+function pine = find_the_pine(I)
+    R = squeeze(I(:,:,1));
+    G = squeeze(I(:,:,2));
+    B = squeeze(I(:,:,3));    
+    subplot(3,3,1);
+    imshow(R);
+    subplot(3,3,2);
+    imshow(G);
+    subplot(3,3,3);
+    imshow(B);
+    
+    I_hsv = rgb2hsv(I);
+    subplot(2,3,4);
+    imshow(Iv);
+end
