@@ -4,8 +4,8 @@ J = mat2gray(J);
 
 % Threshold values -- you can play with them
 canny_th       =  0.17;
-non_max_sup__k =  5;
-non_max_sup__p = 10;
+non_max_sup__k =  9;
+non_max_sup__p = 30;
 
 
 % Canny edge detector
