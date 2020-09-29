@@ -9,10 +9,8 @@ function [H] = my_hough(input_img)
                     r = round(x*cosd(theta)+y*sind(theta)); %calculate radius in the current edge point for every theta value
                     if (0<r) && (r<size(H,1)+1)
                         H(r,theta)=H(r,theta)+1; %increment H at the appropriate location
-                    end
-                    
+                    end 
                 end
-                imagesc(H);
             end
         end
     end
