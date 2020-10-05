@@ -3,7 +3,7 @@ function newF = mask_fourier(F, x, y, r)
     x = round(x); % x, y are vectors
     y = round(y);
     
-    for i = 1:size(x,2)
+    for i = 1:max(size(x))
         x_1 = max([1 x(i)-r]);
         x_2 = min([x(i)+r size(F,1)]);
         y_1 = max([1 y(i)-r]);
