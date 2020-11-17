@@ -36,8 +36,9 @@ function mrf = gmrf_defineRegions(params, mrf)
         
         r = rects{ind};
         img = params.InputImage(r.y1:r.y2,r.x1:r.x2);
-        mrf.gauss_params{ind}.mean = mean(img(:));
-        mrf.gauss_params{ind}.dev = std(img(:));
+        mrf.gauss_params{ind}.mean = mean(double(img(:)));
+        mrf.gauss_params{ind}.dev = std(double(img(:)));
+        mrf.logProbs{ind} = -log(normpdf(double(params.InputImage),mrf.gauss_params{ind}.mean,mrf.gauss_params{ind}.dev));
         
         % ====================================== %
         %                                        %
