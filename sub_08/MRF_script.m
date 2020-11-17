@@ -13,7 +13,7 @@ clear; close all; clc;
 params.InputImgPath = 'input/trin3.bmp';
 
 params.NumOfClasses = 4;
-params.InitMethod   = 'RAND'; % 'RAND', 'MAP' 
+params.InitMethod   = 'MAP'; % 'RAND',  'RAND'
 params.OptiMethod   = 'ICM'; % 'MMD', 'ICM'
 
 params.Beta      = 0.9;
