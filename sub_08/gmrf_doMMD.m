@@ -65,7 +65,7 @@ function mrf=gmrf_doMMD(mrf)
                 % COMPUTE ENERGY
                 U_act = posteriorprobability_act + priorprobability_act;
                 U_new = posteriorprobability_new + priorprobability_new;
-                dU = U_new + U_act;
+                dU = U_new - U_act;
                 
                 if dU < 0 || (dU > 0 && rand < exp(-dU/T))
                     summa_deltaE = summa_deltaE + abs(dU);
